@@ -1,0 +1,24 @@
+# This repo is a fork of tchapgouv/tchap-desktop and only receives Dependabot
+# *security* updates (no version updates are configured on purpose, to keep the
+# fork close to upstream). This file exists solely to group those security PRs
+# into one per ecosystem instead of one per package.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 0
+    groups:
+      npm-security:
+        applies-to: security-updates
+        patterns: ["*"]
+  - package-ecosystem: cargo
+    directory: /src-tauri
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 0
+    groups:
+      cargo-security:
+        applies-to: security-updates
+        patterns: ["*"]
